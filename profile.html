@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile Card</title>
+</head>
+<body>
+
+  <header>
+    <h1>Pujan Rasaili</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <article>
+      <h2>Profile</h2>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hi! I am Pujan Rasaili, a passionate developer currently enrolled in the MERN + AI Summer Intensive.
+          I love building web applications and learning new technologies. I am based in Kathmandu, Nepal,
+          and I am excited to grow my skills in full-stack development and artificial intelligence.
+        </p>
+
+        <details>
+          <summary>Click for more about me</summary>
+          <p>
+            Outside of coding, I enjoy hiking in the Himalayas, reading tech blogs, and experimenting
+            with AI tools. I believe technology can solve real problems for people in Nepal and beyond.
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <table style="border-collapse: collapse; border: 1px solid black;">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Institution</th>
+              <th>Degree</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2020 – 2024</td>
+              <td>Tribhuvan University</td>
+              <td>Bachelor of Science in Computer Science</td>
+            </tr>
+            <tr>
+              <td>2018 – 2020</td>
+              <td>Kathmandu Model College</td>
+              <td>Higher Secondary (Science)</td>
+            </tr>
+            <tr>
+              <td>2026</td>
+              <td>MERN + AI Summer Intensive</td>
+              <td>Certificate in Full-Stack Development</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="photo">
+        <h2>Profile Photo</h2>
+        <figure>
+          <img
+            src="https://picsum.photos/200"
+            alt="Profile photo of Alex Johnson"
+            width="200"
+            height="200"
+          />
+          <figcaption>Pujan Rasaili — Full-Stack Developer</figcaption>
+        </figure>
+      </section>
+
+    </article>
+
+    <aside>
+      <h2>Fun Facts</h2>
+      <dl>
+        <dt>Favorite language</dt>
+        <dd>JavaScript — it runs everywhere!</dd>
+        <dt>Hometown</dt>
+        <dd>Kathmandu, Nepal</dd>
+        <dt>Goal</dt>
+        <dd>Build an AI-powered app that helps Nepali students learn to code</dd>
+      </dl>
+
+      <h3>Useful Links</h3>
+      <ul>
+        <li>
+          <a href="https://developer.mozilla.org" target="_blank" rel="noopener">
+            MDN Web Docs (opens in new tab)
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com" target="_blank" rel="noopener">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="/contact" method="POST">
+
+      <label for="cname">Your Name</label><br />
+      <input type="text" id="cname" name="cname" placeholder="Enter your name" required /><br /><br />
+
+      <label for="cemail">Your Email</label><br />
+      <input type="email" id="cemail" name="cemail" placeholder="Enter your email" required /><br /><br />
+
+      <label for="message">Message</label><br />
+      <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your message here..." required></textarea><br /><br />
+
+      <button type="submit">Send Message</button>
+
+    </form>
+  </section>
+
+  <footer>
+    <p id="projects">&copy; <time datetime="2026">2026</time> Pujan Rasaili. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
