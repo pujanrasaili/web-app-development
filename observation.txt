@@ -1,0 +1,158 @@
+PHASE 1 — OBSERVATION NOTES
+=============================
+Websites Observed: airbnb.com, nationalgeographic.com, notion.so
+Date of Observation: May 2025
+
+--------------------------------------------------------------
+WEBSITE 1: airbnb.com
+--------------------------------------------------------------
+Layout:
+  - Full-width hero with a centered search bar
+  - Horizontal scrollable card rows below the hero
+  - Grid layout for listings (3-4 columns on desktop)
+  - Footer split into multiple columns with clear headings
+
+Colors:
+  - Signature coral/red accent (#FF5A5F)
+  - Mostly white background with very light gray section dividers
+  - Dark charcoal for body text (not pure black — softer on eyes)
+
+Spacing:
+  - Generous padding around cards (approx 24px gaps)
+  - Breathing room between sections (~80-100px vertical padding)
+  - Consistent inner card padding
+
+Buttons:
+  - Rounded pill-shaped buttons (border-radius ~30px)
+  - Solid accent color fill with white text for primary CTAs
+  - Ghost/outline buttons for secondary actions
+
+Navigation:
+  - Sticky top nav that turns white with shadow on scroll
+  - Logo on left, links centered, login/signup on right
+  - Shrinks slightly when scrolling down
+
+Image Placement:
+  - Images dominate cards (roughly 60% card height)
+  - Hero image fills 70-80vh
+  - Overlay text on hero image with dark gradient underneath
+
+--------------------------------------------------------------
+WEBSITE 2: nationalgeographic.com
+--------------------------------------------------------------
+Layout:
+  - Editorial/magazine-style: large featured story takes full width
+  - Below: 2-column and 3-column mixed grid
+  - Asymmetric layout creates visual interest
+  - Strong horizontal rule dividers between sections
+
+Colors:
+  - Yellow accent (their brand yellow: #FFCC00)
+  - Black and white dominant — very bold contrast
+  - Occasional dark navy used for article category tags
+
+Spacing:
+  - Tight spacing between news items — dense, information-heavy
+  - Headlines given large type size to breathe even in dense layout
+  - Very little wasted space; every pixel used intentionally
+
+Buttons:
+  - Minimal — mostly text links with underline hover
+  - Subscription CTA is bold black filled button
+  - Buttons have uppercase letter-spacing for a premium feel
+
+Navigation:
+  - Black background nav with white text — strong brand identity
+  - Dropdown mega-menus for categories
+  - Search icon on right
+
+Image Placement:
+  - Images are the hero — very cinematic, large-format
+  - Captions placed below images in smaller italic type
+  - Some sections use images as full-background with text overlay
+
+--------------------------------------------------------------
+WEBSITE 3: notion.so
+--------------------------------------------------------------
+Layout:
+  - Clean, centered content column (~1000px max-width)
+  - Alternating left/right feature sections below hero
+  - Heavy use of white space — "breathing" layout
+  - Cards used to showcase use cases in a 3-column grid
+
+Colors:
+  - Off-white background (#F7F6F3) — not pure white; feels warmer
+  - Black for primary text
+  - Subtle gray borders for cards
+  - One accent: medium blue for CTA buttons only
+
+Spacing:
+  - Very generous — section gaps of 100-140px
+  - Card padding is large (~40px inside)
+  - Line height is generous (~1.6–1.8) for readability
+
+Buttons:
+  - Slightly rounded corners (not pill-shaped, not sharp rectangle)
+  - Primary: black fill, white text
+  - Very minimal hover: slight color shift only
+
+Navigation:
+  - Ultra-clean: logo + minimal links + one CTA
+  - Transparent on load, white background with border on scroll
+  - No visual clutter
+
+Image Placement:
+  - Product screenshots inside browser/device mockups
+  - Centered, with soft drop shadow
+  - Not full-bleed — images are contained within sections
+
+==============================================================
+PATTERNS I NOTICED ACROSS ALL THREE WEBSITES:
+==============================================================
+
+1. CONSISTENCY — All three maintained a 2-3 color palette max.
+   No website used more than 3 accent colors.
+
+2. HIERARCHY — Every site had a clear visual hierarchy:
+   H1 (huge) > H2 (medium) > body text (small, readable).
+   Size and weight controlled attention, not color.
+
+3. WHITESPACE IS NOT WASTED — All three used negative space
+   intentionally. Cramped layouts feel cheap; space = premium.
+
+4. STICKY NAVIGATION — All three had navbars that stayed
+   visible while scrolling (sticky/fixed positioning).
+
+5. CARD PATTERN — Every site used cards to group related info.
+   Cards had consistent padding, border-radius, and shadows.
+
+6. CALLS TO ACTION — Each site had ONE dominant CTA button
+   per section. They never competed with each other visually.
+
+==============================================================
+WHICH LOOKED MOST PROFESSIONAL?
+==============================================================
+National Geographic looked most professional.
+Reason: Bold typography, extreme contrast, and a clear brand
+identity. Every design decision felt intentional. The black
+navbar with yellow accent was instantly memorable.
+
+==============================================================
+WHICH FELT CONFUSING?
+==============================================================
+Airbnb's category scrolling felt slightly disorienting on first
+visit — too many scrollable rows stacked vertically. It wasn't
+bad, but required more effort to understand the layout.
+
+==============================================================
+WHAT MAKES A WEBSITE LOOK MODERN?
+==============================================================
+1. Large, bold typography — oversized headlines are trendy
+2. Generous whitespace — modern sites don't fear empty space
+3. Subtle animations — hover effects, fade-ins, smooth scrolls
+4. Consistent border-radius — everything slightly rounded OR
+   everything sharp — mixing looks amateurish
+5. Mobile-first thinking — sections that reflow cleanly
+6. Limited color palette — 1 dominant + 1 accent + neutrals
+7. High-quality images — no pixelated or stretched photos
+8. Clean navigation — fewer links = more trust

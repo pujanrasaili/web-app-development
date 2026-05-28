@@ -1,0 +1,110 @@
+PHASE 5 — SELF-LEARNING DOCUMENT
+====================================
+Feature Added: Scroll-triggered Fade-in Animations
+              using IntersectionObserver API
+
+==============================================================
+WHAT I LEARNED
+==============================================================
+
+I learned about the JavaScript IntersectionObserver API.
+
+This is a browser-built-in tool that watches HTML elements and
+tells you when they enter or exit the visible area of the
+screen (the "viewport").
+
+Before learning this, I thought scroll animations required
+complex JavaScript where you calculate scroll position and
+element offset manually. That approach is messy and slow.
+
+IntersectionObserver is cleaner:
+  - You create an Observer object
+  - You tell it which elements to "watch"
+  - You define a callback function that fires when those
+    elements become visible
+  - The callback adds a CSS class, which triggers a CSS
+    transition
+
+The CSS I use for the animation:
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+The JavaScript:
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+  });
+
+The 'threshold: 0.15' means the animation triggers when 15%
+of the element is visible — not too early, not too late.
+
+==============================================================
+WHY I ADDED IT
+==============================================================
+
+When I first built the website, all content loaded at once.
+Scrolling down felt like reading a static document — there
+was no sense of progression or discovery.
+
+I noticed on professional websites (Airbnb, Notion, etc.) that
+elements fade in as you scroll. This creates two feelings:
+  1. The page feels "alive" and dynamic
+  2. Your eye is guided to new content naturally
+
+Adding this made my website feel noticeably more modern and
+professional without adding complex JavaScript.
+
+==============================================================
+WHAT PROBLEM IT SOLVED
+==============================================================
+
+PROBLEM: The website felt flat and static after building.
+The dark theme looked good, but scrolling was like reading
+a PDF — no interaction, no progression.
+
+SOLUTION: Scroll-triggered animations created a "reveal"
+experience. As visitors scroll down, sections appear smoothly.
+This:
+
+  1. Improves perceived performance — the page loads fast
+     because heavy content is hidden until needed visually
+
+  2. Guides attention — one section reveals at a time, so
+     visitors read content in the intended order
+
+  3. Adds professionalism — the animation is subtle (not
+     distracting), which is the goal: you feel it, don't
+     see it
+
+ADDITIONAL LEARNING: I also added CSS transitions to the
+navigation bar. When the user scrolls past 50px, the nav
+gets a solid dark background with a shadow. Without this,
+the transparent nav overlapped content in a messy way.
+This was solved with a scroll event listener in JavaScript:
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+Source of learning: MDN Web Docs (developer.mozilla.org)
+under "IntersectionObserver API" — I read the documentation
+and applied it by experimenting with threshold values until
+the timing felt right.
