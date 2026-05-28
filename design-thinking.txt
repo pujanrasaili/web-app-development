@@ -1,0 +1,109 @@
+PHASE 4. DESIGN THINKING DOCUMENT
+=====================================
+Project: Himalayan Eco-Trek. Travel Startup Website
+Student: Pujan Rasaili
+==============================================================
+
+WHY I CHOSE THESE COLORS
+
+==============================================================
+
+Primary Background: #0D0D0D (near-black)
+
+I chose a background for the website because it is about dramatic mountain landscapes. Dark themes make photography look great and feel like a movie. It's like opening a National Geographic magazine. Most websites use backgrounds so dark is a good way to stand out.
+
+Accent Color: #C8A96E ( gold/amber)
+
+I picked gold because it reminds me of the sunrise on mountain peaks, which is called the " hour". It's also a premium color that doesn't feel too strong. I didn't choose red or orange because many travel brands already use those colors.
+
+Secondary Text: #8A8A8A (medium gray)
+
+I used this color for subtitles and captions. It's easy to read and doesn't compete with the white headlines.
+
+Card Backgrounds: #1A1A1A ( lighter than page background)
+
+This color is a little different from the page background, which creates depth without a border. I got this idea from Notion, which uses an off-white card on a light background.
+
+Overall I wanted the colors to feel luxurious and adventurous. The black, gold and white palette was inspired by high-end hotel websites and outdoor gear brands.
+
+==============================================================
+
+WHY I ARRANGED SECTIONS IN THIS ORDER
+
+==============================================================
+
+1. NAVIGATION (top)
+
+The navigation menu is always first because users need to know where they are on the website. I made it sticky so it stays on the screen as users scroll.
+
+2. HERO SECTION
+
+This section makes a first impression. I wanted to make visitors feel like they're in the mountains away. A big headline, subtext and a call-to-action button is a pattern for startup landing pages.
+
+3. STATS SECTION (numbers bar)
+
+After the hero section visitors want to know why they should trust the website. This section shows some numbers to build credibility.
+
+4. CONTENT CARDS (trek packages)
+
+This section shows the products: three trek packages. Cards make it easy to compare options.
+
+5. IMAGE / EXPERIENCE SECTION
+
+This section is a break from text- content. It's a full-width section with a quote that makes visitors feel something.
+
+6. CALL TO ACTION SECTION
+
+Now that visitors know what the website offers and feel inspired it's time to ask them to take action. If I put the call-to-action early visitors might leave.
+
+7. FOOTER
+
+The footer is a section with links, contact information and copyright. Visitors scroll to the footer when they want information or want to check if the website is legitimate.
+
+==============================================================
+
+WHICH SECTION WAS HARDEST TO DESIGN
+
+==============================================================
+
+The CARDS SECTION was the hardest to design.
+
+The challenge was to show a lot of information on each card without making it look cluttered. I tried three designs:
+
+*   Attempt 1: A box with all information stacked vertically. It looked like a table, not a card.
+
+*   Attempt 2: An image at the top and information. The problem was that I was using images, which looked messy.
+
+*   Attempt 3 (final): A card with a gradient header area a difficulty badge, a bold price and limited description text. I added a hover effect that makes the cards feel interactive and premium.
+
+==============================================================
+
+WHAT I CHANGED WHILE BUILDING
+
+==============================================================
+
+1.  Plan: White/light theme
+
+Changed to: Dark theme
+
+Reason: The dark theme felt more adventurous and "trek-worthy". The light theme felt like a spa website.
+
+2.  Original plan: 4 cards in a row
+
+Changed to: 3 cards
+
+Reason: 4 cards made each card too narrow on desktop. 3 Cards gave each card room to breathe.
+
+3.  Original plan: Regular font (system default)
+
+Changed to: Google Fonts. 'Playfair Display' for headings and 'Raleway' for body text
+
+Reason: System fonts look unprofessional. Playfair has a quality that fits the photography/travel niche.
+
+4.  Added: CSS animated gradient, on hero section
+
+Reason: The static hero section felt flat. The moving gradient simulates light changing on mountains.
+
+5.  Added: Scroll-triggered fade-in animations
+
+Reason: I learned about IntersectionObserver API and decided to apply it. It makes the page feel alive and modern.

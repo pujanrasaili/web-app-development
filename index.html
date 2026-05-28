@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SummitPath — Himalayan Eco-Trek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-symbol">&#9651;</span>
+        <span class="logo-text">SummitPath</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#treks">Treks</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Book a Trek</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#treks">Treks</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Nepal · Tibet · Bhutan</p>
+      <h1 class="hero-title">Where the World<br /><em>Stands Still</em></h1>
+      <p class="hero-subtitle">
+        Guided Himalayan treks designed for those who seek stillness,
+        altitude, and transformation. Small groups. Zero trace. Pure experience.
+      </p>
+      <div class="hero-buttons">
+        <a href="#treks" class="btn btn-primary">Explore Treks</a>
+        <a href="#experience" class="btn btn-ghost">Watch Story</a>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll to discover</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="hero-altitude">
+      <span>8,849m</span>
+      <span class="altitude-label">Mt. Everest</span>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <section class="stats-bar reveal">
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-number">14+</span>
+        <span class="stat-label">Years of Experience</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">2,400+</span>
+        <span class="stat-label">Trekkers Guided</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">38</span>
+        <span class="stat-label">Trail Routes</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">0</span>
+        <span class="stat-label">Serious Incidents</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TREK CARDS SECTION ===== -->
+  <section class="treks-section" id="treks">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Our Routes</p>
+      <h2 class="section-title">Choose Your Altitude</h2>
+      <p class="section-subtitle">
+        Every route is led by a certified Sherpa guide and designed for your fitness level.
+        All treks include acclimatization days, meals, and camp equipment.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="trek-card reveal">
+        <div class="card-header beginner">
+          <div class="card-gradient-bg"></div>
+          <span class="difficulty-badge beginner-badge">Beginner</span>
+          <div class="card-mountain-art">
+            <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="50,130 150,20 250,130" fill="rgba(255,255,255,0.07)" />
+              <polygon points="0,130 90,55 180,130" fill="rgba(255,255,255,0.05)" />
+              <polygon points="120,130 200,40 280,130" fill="rgba(255,255,255,0.06)" />
+              <line x1="0" y1="130" x2="300" y2="130" stroke="rgba(200,169,110,0.3)" stroke-width="1" />
+            </svg>
+          </div>
+          <div class="card-header-text">
+            <h3>Poon Hill Trek</h3>
+            <p>Ghorepani, Nepal</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-item">&#128336; 5 Days</span>
+            <span class="meta-item">&#128202; 3,210m Peak</span>
+            <span class="meta-item">&#9971; Apr – Nov</span>
+          </div>
+          <p class="card-description">
+            The classic sunrise trek. Wake before dawn and witness the Annapurna range
+            turn gold in front of you. No technical climbing required.
+          </p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-label">From</span>
+              <span class="price-amount">NPR 28,000</span>
+            </div>
+            <a href="#contact" class="card-btn">View Route</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="trek-card reveal" style="animation-delay: 0.15s;">
+        <div class="card-header moderate">
+          <div class="card-gradient-bg"></div>
+          <span class="difficulty-badge moderate-badge">Moderate</span>
+          <div class="card-mountain-art">
+            <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="150,10 250,130 50,130" fill="rgba(255,255,255,0.08)" />
+              <polygon points="20,130 100,40 190,130" fill="rgba(255,255,255,0.05)" />
+              <polygon points="110,130 200,30 290,130" fill="rgba(255,255,255,0.06)" />
+              <line x1="0" y1="130" x2="300" y2="130" stroke="rgba(200,169,110,0.3)" stroke-width="1" />
+            </svg>
+          </div>
+          <div class="card-header-text">
+            <h3>Everest Base Camp</h3>
+            <p>Khumbu, Nepal</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-item">&#128336; 14 Days</span>
+            <span class="meta-item">&#128202; 5,364m Peak</span>
+            <span class="meta-item">&#9971; Mar – May</span>
+          </div>
+          <p class="card-description">
+            Stand at the foot of the world's highest peak. Traverse glaciers,
+            Buddhist monasteries, and the legendary Sherpa villages of Namche Bazaar.
+          </p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-label">From</span>
+              <span class="price-amount">NPR 95,000</span>
+            </div>
+            <a href="#contact" class="card-btn">View Route</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="trek-card reveal" style="animation-delay: 0.3s;">
+        <div class="card-header expert">
+          <div class="card-gradient-bg"></div>
+          <span class="difficulty-badge expert-badge">Expert</span>
+          <div class="card-mountain-art">
+            <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="150,5 270,130 30,130" fill="rgba(255,255,255,0.09)" />
+              <polygon points="0,130 110,35 210,130" fill="rgba(255,255,255,0.05)" />
+              <polygon points="90,130 200,25 300,130" fill="rgba(255,255,255,0.06)" />
+              <line x1="0" y1="130" x2="300" y2="130" stroke="rgba(200,169,110,0.3)" stroke-width="1" />
+            </svg>
+          </div>
+          <div class="card-header-text">
+            <h3>Annapurna Circuit</h3>
+            <p>Thorong La, Nepal</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-item">&#128336; 21 Days</span>
+            <span class="meta-item">&#128202; 5,416m Peak</span>
+            <span class="meta-item">&#9971; Oct – Nov</span>
+          </div>
+          <p class="card-description">
+            The full circuit. Cross the world's highest trekking pass at 5,416m.
+            Traverse every climate zone from subtropical jungle to high arctic desert.
+          </p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-label">From</span>
+              <span class="price-amount">NPR 145,000</span>
+            </div>
+            <a href="#contact" class="card-btn">View Route</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== IMAGE / EXPERIENCE SECTION ===== -->
+  <section class="experience-section" id="experience">
+    <div class="experience-inner reveal">
+      <div class="experience-text">
+        <p class="section-eyebrow">The SummitPath Promise</p>
+        <h2 class="experience-quote">
+          "Not a tourist.<br />Not an athlete.<br /><em>A witness.</em>"
+        </h2>
+        <p class="experience-body">
+          We believe the mountain teaches what the classroom cannot. Every trek we design
+          includes mandatory slow days — not for rest, but for observation. You'll learn
+          to read weather in cloud formations, cook over a single-burner stove at altitude,
+          and navigate with a paper map. Leave-no-trace is not a policy here. It is culture.
+        </p>
+        <a href="#treks" class="btn btn-primary">See All Treks</a>
+      </div>
+      <div class="experience-visual">
+        <div class="visual-card-stack">
+          <div class="visual-card vc1">
+            <div class="vc-landscape">
+              <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a2a4a" />
+                    <stop offset="100%" stop-color="#4a6a8a" />
+                  </linearGradient>
+                  <linearGradient id="snow1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#e8e4d4" />
+                    <stop offset="100%" stop-color="#b8b4a4" />
+                  </linearGradient>
+                </defs>
+                <rect width="280" height="180" fill="url(#sky1)" />
+                <circle cx="220" cy="35" r="18" fill="#c8a020" opacity="0.9" />
+                <polygon points="70,155 140,40 210,155" fill="url(#snow1)" />
+                <polygon points="0,155 60,70 120,155" fill="#8a9aaa" />
+                <polygon points="160,155 220,65 280,155" fill="#7a8a9a" />
+                <polygon points="100,155 140,60 180,155" fill="#d0cec0" opacity="0.6" />
+                <rect x="0" y="155" width="280" height="25" fill="#4a5a3a" />
+                <rect x="0" y="165" width="280" height="15" fill="#3a4a2a" />
+              </svg>
+            </div>
+            <p class="vc-label">Dawn at Thorong La Pass</p>
+          </div>
+          <div class="visual-card vc2">
+            <div class="vc-landscape">
+              <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0a1520" />
+                    <stop offset="100%" stop-color="#1a3050" />
+                  </linearGradient>
+                </defs>
+                <rect width="200" height="130" fill="url(#sky2)" />
+                <circle cx="30" cy="25" r="3" fill="white" opacity="0.8" />
+                <circle cx="80" cy="15" r="2" fill="white" opacity="0.6" />
+                <circle cx="140" cy="30" r="2.5" fill="white" opacity="0.7" />
+                <circle cx="170" cy="12" r="1.5" fill="white" opacity="0.5" />
+                <circle cx="60" cy="40" r="1.5" fill="white" opacity="0.4" />
+                <polygon points="30,110 90,35 150,110" fill="#2a3040" />
+                <polygon points="80,110 130,45 180,110" fill="#1e2838" />
+                <polygon points="0,110 50,60 100,110" fill="#263040" />
+                <polygon points="80,110 90,38 100,110" fill="#9a9a8a" opacity="0.5" />
+                <rect x="0" y="110" width="200" height="20" fill="#1a2010" />
+                <rect x="85" y="85" width="3" height="25" fill="#8a7a50" opacity="0.5" />
+                <polygon points="80,85 88,70 96,85" fill="#c8a060" opacity="0.4" />
+              </svg>
+            </div>
+            <p class="vc-label">Starfield · 4,200m</p>
+          </div>
+          <div class="visual-card vc3">
+            <div class="vc-badge">ECO CERTIFIED</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section" id="about">
+    <div class="cta-inner reveal">
+      <p class="section-eyebrow">Ready?</p>
+      <h2 class="cta-title">Your Trek Begins<br />With One Message</h2>
+      <p class="cta-subtitle">
+        Tell us your fitness level, available dates, and dream altitude.
+        We'll design a custom route within 48 hours — no commitment required.
+      </p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary btn-large">Plan My Trek</a>
+        <a href="mailto:hello@summitpath.np" class="btn btn-ghost">Email Us</a>
+      </div>
+      <p class="cta-note">&#10003; Free consultation &nbsp;&nbsp; &#10003; No deposit until confirmed &nbsp;&nbsp; &#10003; Full refund policy</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-symbol">&#9651;</span>
+          <span class="logo-text">SummitPath</span>
+        </div>
+        <p class="footer-tagline">
+          Himalayan Eco-Trek Co.<br />
+          Thamel, Kathmandu, Nepal 44600
+        </p>
+        <p class="footer-contact-info">
+          &#128222; +977-1-4780000<br />
+          &#9993; hello@summitpath.np
+        </p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Treks</h4>
+        <ul>
+          <li><a href="#">Poon Hill</a></li>
+          <li><a href="#">Everest Base Camp</a></li>
+          <li><a href="#">Annapurna Circuit</a></li>
+          <li><a href="#">Langtang Valley</a></li>
+          <li><a href="#">Manaslu Circuit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Our Guides</a></li>
+          <li><a href="#">Eco Policy</a></li>
+          <li><a href="#">Safety Record</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Plan</h4>
+        <ul>
+          <li><a href="#">What to Pack</a></li>
+          <li><a href="#">Permit Guide</a></li>
+          <li><a href="#">Altitude FAQ</a></li>
+          <li><a href="#">Insurance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; 2025 SummitPath Eco-Trek Pvt. Ltd. &nbsp;|&nbsp; All rights reserved
+      </p>
+      <p class="footer-legal">
+        <a href="#">Privacy</a> &nbsp;&bull;&nbsp;
+        <a href="#">Terms</a> &nbsp;&bull;&nbsp;
+        <a href="#">Cookies</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky navbar effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+
+    // Scroll-triggered fade-in using IntersectionObserver (Phase 5 self-learning)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
