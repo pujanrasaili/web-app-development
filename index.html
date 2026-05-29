@@ -3,222 +3,401 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML Essentials Practice</title>
+  <title>SummitPath — Himalayan Eco-Trek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Part 1: Block vs Inline -->
-  <p>This is a paragraph (block — takes full width).</p>
-  <span>This is a span (inline — only as wide as content).</span>
-  <span>Spans sit next to each other.</span>
-
-  <hr />
-
-  <!-- Part 2: Headings -->
-  <h1>This is an h1 (one per page!)</h1>
-  <h2>This is an h2</h2>
-  <h3>This is an h3</h3>
-  <h4>This is an h4</h4>
-  <h5>This is an h5</h5>
-  <h6>This is an h6</h6>
-
-  <!-- Part 2: Text Formatting -->
-  <p>A normal paragraph.</p>
-  <p>
-    You can have <strong>important text</strong>,
-    <em>emphasized text</em>,
-    <mark>highlighted text</mark>,
-    <small>smaller text</small>,
-    <del>deleted text</del>,
-    and <ins>inserted text</ins>.
-  </p>
-  <p>Line break <br /> inside a paragraph.</p>
-  <hr />
-  <p>Above this paragraph is a horizontal rule.</p>
-
-  <!-- Part 2: Lists -->
-  <h2>Unordered list (bullets)</h2>
-  <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-  </ul>
-
-  <h2>Ordered list (numbers)</h2>
-  <ol>
-    <li>Open VS Code</li>
-    <li>Create a file</li>
-    <li>Write HTML</li>
-  </ol>
-
-  <h2>Description list</h2>
-  <dl>
-    <dt>HTML</dt>
-    <dd>The structure of a webpage</dd>
-    <dt>CSS</dt>
-    <dd>The styling of a webpage</dd>
-  </dl>
-
-  <!-- Part 2: Links -->
-  <h2>Links</h2>
-  <a href="https://developer.mozilla.org">External link to MDN</a><br />
-  <a href="about.html">Link to another page in this folder</a><br />
-  <a href="#contact">Link to a section in this page (anchor)</a><br />
-  <a href="mailto:hello@example.com">Send email</a><br />
-  <a href="tel:+9779800000000">Call phone</a><br />
-  <a href="https://example.com" target="_blank" rel="noopener">Open in new tab</a>
-
-  <!-- Part 2: Image -->
-  <h2>Image</h2>
-  <img
-    src="https://picsum.photos/300/200"
-    alt="A random scenic photo"
-    width="300"
-    height="200"
-  />
-
-  <!-- Part 3: Form -->
-  <h2>Contact Form</h2>
-  <form action="/submit" method="POST">
-    <label for="name">Full name</label><br />
-    <input type="text" id="name" name="name" placeholder="John Doe" required /><br /><br />
-
-    <label for="email">Email</label><br />
-    <input type="email" id="email" name="email" required /><br /><br />
-
-    <label for="age">Age</label><br />
-    <input type="number" id="age" name="age" min="13" max="120" /><br /><br />
-
-    <label for="password">Password</label><br />
-    <input type="password" id="password" name="password" minlength="8" required /><br /><br />
-
-    <label for="bio">About you</label><br />
-    <textarea id="bio" name="bio" rows="4" cols="40"></textarea><br /><br />
-
-    <label for="country">Country</label><br />
-    <select id="country" name="country">
-      <option value="">-- Select --</option>
-      <option value="np">Nepal</option>
-      <option value="in">India</option>
-      <option value="us">United States</option>
-    </select><br /><br />
-
-    <fieldset>
-      <legend>Gender</legend>
-      <input type="radio" id="m" name="gender" value="male" />
-      <label for="m">Male</label>
-      <input type="radio" id="f" name="gender" value="female" />
-      <label for="f">Female</label>
-      <input type="radio" id="o" name="gender" value="other" />
-      <label for="o">Other</label>
-    </fieldset><br />
-
-    <input type="checkbox" id="terms" name="terms" required />
-    <label for="terms">I agree to the terms</label><br /><br />
-
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
-  </form>
-
-  <!-- Part 4: Table -->
-  <h2>Course Schedule</h2>
-  <table border="1">
-    <caption>Course Schedule</caption>
-    <thead>
-      <tr>
-        <th>Week</th>
-        <th>Topic</th>
-        <th>Outcome</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>HTML</td>
-        <td>Static website</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>CSS</td>
-        <td>Styled &amp; responsive</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="2">Total weeks</td>
-        <td>12</td>
-      </tr>
-    </tfoot>
-  </table>
-
-  <!-- Part 4: Media -->
-  <h2>Video</h2>
-  <video controls width="400">
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg" />
-    Your browser does not support video.
-  </video>
-
-  <h2>Audio</h2>
-  <audio controls>
-    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
-    Your browser does not support audio.
-  </audio>
-
-  <h2>Embedded Video (iframe)</h2>
-  <iframe
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-    width="560"
-    height="315"
-    title="YouTube video"
-    allowfullscreen
-  ></iframe>
-
-  <!-- Part 5: Semantic Structure -->
-  <h2>Semantic HTML Example</h2>
-
-  <header>
-    <h1>My Blog</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-symbol">&#9651;</span>
+        <span class="logo-text">SummitPath</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#treks">Treks</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
-  </header>
+      <a href="#contact" class="nav-cta">Book a Trek</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#treks">Treks</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  <main>
-    <article>
-      <header>
-        <h2>Why semantic HTML matters</h2>
-        <p>Published <time datetime="2026-05-22">May 22, 2026</time></p>
-      </header>
-      <section>
-        <h3>Accessibility</h3>
-        <p>Screen readers can navigate by landmark.</p>
-      </section>
-      <section>
-        <h3>SEO</h3>
-        <p>Google understands your content better.</p>
-      </section>
-      <footer>
-        <p>Tags: <a href="#html">HTML</a>, <a href="#a11y">Accessibility</a></p>
-      </footer>
-    </article>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Nepal · Tibet · Bhutan</p>
+      <h1 class="hero-title">Where the World<br /><em>Stands Still</em></h1>
+      <p class="hero-subtitle">
+        Guided Himalayan treks designed for those who seek stillness,
+        altitude, and transformation. Small groups. Zero trace. Pure experience.
+      </p>
+      <div class="hero-buttons">
+        <a href="#treks" class="btn btn-primary">Explore Treks</a>
+        <a href="#experience" class="btn btn-ghost">Watch Story</a>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll to discover</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="hero-altitude">
+      <span>8,849m</span>
+      <span class="altitude-label">Mt. Everest</span>
+    </div>
+  </section>
 
-    <aside>
-      <h3>Related posts</h3>
-      <ul>
-        <li><a href="#">CSS basics</a></li>
-        <li><a href="#">JavaScript intro</a></li>
-      </ul>
-    </aside>
-  </main>
+  <!-- ===== STATS BAR ===== -->
+  <section class="stats-bar reveal">
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-number">14+</span>
+        <span class="stat-label">Years of Experience</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">2,400+</span>
+        <span class="stat-label">Trekkers Guided</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">38</span>
+        <span class="stat-label">Trail Routes</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">0</span>
+        <span class="stat-label">Serious Incidents</span>
+      </div>
+    </div>
+  </section>
 
-  <footer id="contact">
-    <p>&copy; 2026 My Blog. All rights reserved.</p>
+  <!-- ===== TREK CARDS SECTION ===== -->
+  <section class="treks-section" id="treks">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Our Routes</p>
+      <h2 class="section-title">Choose Your Altitude</h2>
+      <p class="section-subtitle">
+        Every route is led by a certified Sherpa guide and designed for your fitness level.
+        All treks include acclimatization days, meals, and camp equipment.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="trek-card reveal">
+        <div class="card-header beginner">
+          <div class="card-gradient-bg"></div>
+          <span class="difficulty-badge beginner-badge">Beginner</span>
+          <div class="card-mountain-art">
+            <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="50,130 150,20 250,130" fill="rgba(255,255,255,0.07)" />
+              <polygon points="0,130 90,55 180,130" fill="rgba(255,255,255,0.05)" />
+              <polygon points="120,130 200,40 280,130" fill="rgba(255,255,255,0.06)" />
+              <line x1="0" y1="130" x2="300" y2="130" stroke="rgba(200,169,110,0.3)" stroke-width="1" />
+            </svg>
+          </div>
+          <div class="card-header-text">
+            <h3>Poon Hill Trek</h3>
+            <p>Ghorepani, Nepal</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-item">&#128336; 5 Days</span>
+            <span class="meta-item">&#128202; 3,210m Peak</span>
+            <span class="meta-item">&#9971; Apr – Nov</span>
+          </div>
+          <p class="card-description">
+            The classic sunrise trek. Wake before dawn and witness the Annapurna range
+            turn gold in front of you. No technical climbing required.
+          </p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-label">From</span>
+              <span class="price-amount">NPR 28,000</span>
+            </div>
+            <a href="#contact" class="card-btn">View Route</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="trek-card reveal" style="animation-delay: 0.15s;">
+        <div class="card-header moderate">
+          <div class="card-gradient-bg"></div>
+          <span class="difficulty-badge moderate-badge">Moderate</span>
+          <div class="card-mountain-art">
+            <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="150,10 250,130 50,130" fill="rgba(255,255,255,0.08)" />
+              <polygon points="20,130 100,40 190,130" fill="rgba(255,255,255,0.05)" />
+              <polygon points="110,130 200,30 290,130" fill="rgba(255,255,255,0.06)" />
+              <line x1="0" y1="130" x2="300" y2="130" stroke="rgba(200,169,110,0.3)" stroke-width="1" />
+            </svg>
+          </div>
+          <div class="card-header-text">
+            <h3>Everest Base Camp</h3>
+            <p>Khumbu, Nepal</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-item">&#128336; 14 Days</span>
+            <span class="meta-item">&#128202; 5,364m Peak</span>
+            <span class="meta-item">&#9971; Mar – May</span>
+          </div>
+          <p class="card-description">
+            Stand at the foot of the world's highest peak. Traverse glaciers,
+            Buddhist monasteries, and the legendary Sherpa villages of Namche Bazaar.
+          </p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-label">From</span>
+              <span class="price-amount">NPR 95,000</span>
+            </div>
+            <a href="#contact" class="card-btn">View Route</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="trek-card reveal" style="animation-delay: 0.3s;">
+        <div class="card-header expert">
+          <div class="card-gradient-bg"></div>
+          <span class="difficulty-badge expert-badge">Expert</span>
+          <div class="card-mountain-art">
+            <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="150,5 270,130 30,130" fill="rgba(255,255,255,0.09)" />
+              <polygon points="0,130 110,35 210,130" fill="rgba(255,255,255,0.05)" />
+              <polygon points="90,130 200,25 300,130" fill="rgba(255,255,255,0.06)" />
+              <line x1="0" y1="130" x2="300" y2="130" stroke="rgba(200,169,110,0.3)" stroke-width="1" />
+            </svg>
+          </div>
+          <div class="card-header-text">
+            <h3>Annapurna Circuit</h3>
+            <p>Thorong La, Nepal</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="meta-item">&#128336; 21 Days</span>
+            <span class="meta-item">&#128202; 5,416m Peak</span>
+            <span class="meta-item">&#9971; Oct – Nov</span>
+          </div>
+          <p class="card-description">
+            The full circuit. Cross the world's highest trekking pass at 5,416m.
+            Traverse every climate zone from subtropical jungle to high arctic desert.
+          </p>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-label">From</span>
+              <span class="price-amount">NPR 145,000</span>
+            </div>
+            <a href="#contact" class="card-btn">View Route</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== IMAGE / EXPERIENCE SECTION ===== -->
+  <section class="experience-section" id="experience">
+    <div class="experience-inner reveal">
+      <div class="experience-text">
+        <p class="section-eyebrow">The SummitPath Promise</p>
+        <h2 class="experience-quote">
+          "Not a tourist.<br />Not an athlete.<br /><em>A witness.</em>"
+        </h2>
+        <p class="experience-body">
+          We believe the mountain teaches what the classroom cannot. Every trek we design
+          includes mandatory slow days — not for rest, but for observation. You'll learn
+          to read weather in cloud formations, cook over a single-burner stove at altitude,
+          and navigate with a paper map. Leave-no-trace is not a policy here. It is culture.
+        </p>
+        <a href="#treks" class="btn btn-primary">See All Treks</a>
+      </div>
+      <div class="experience-visual">
+        <div class="visual-card-stack">
+          <div class="visual-card vc1">
+            <div class="vc-landscape">
+              <svg viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a2a4a" />
+                    <stop offset="100%" stop-color="#4a6a8a" />
+                  </linearGradient>
+                  <linearGradient id="snow1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#e8e4d4" />
+                    <stop offset="100%" stop-color="#b8b4a4" />
+                  </linearGradient>
+                </defs>
+                <rect width="280" height="180" fill="url(#sky1)" />
+                <circle cx="220" cy="35" r="18" fill="#c8a020" opacity="0.9" />
+                <polygon points="70,155 140,40 210,155" fill="url(#snow1)" />
+                <polygon points="0,155 60,70 120,155" fill="#8a9aaa" />
+                <polygon points="160,155 220,65 280,155" fill="#7a8a9a" />
+                <polygon points="100,155 140,60 180,155" fill="#d0cec0" opacity="0.6" />
+                <rect x="0" y="155" width="280" height="25" fill="#4a5a3a" />
+                <rect x="0" y="165" width="280" height="15" fill="#3a4a2a" />
+              </svg>
+            </div>
+            <p class="vc-label">Dawn at Thorong La Pass</p>
+          </div>
+          <div class="visual-card vc2">
+            <div class="vc-landscape">
+              <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#0a1520" />
+                    <stop offset="100%" stop-color="#1a3050" />
+                  </linearGradient>
+                </defs>
+                <rect width="200" height="130" fill="url(#sky2)" />
+                <circle cx="30" cy="25" r="3" fill="white" opacity="0.8" />
+                <circle cx="80" cy="15" r="2" fill="white" opacity="0.6" />
+                <circle cx="140" cy="30" r="2.5" fill="white" opacity="0.7" />
+                <circle cx="170" cy="12" r="1.5" fill="white" opacity="0.5" />
+                <circle cx="60" cy="40" r="1.5" fill="white" opacity="0.4" />
+                <polygon points="30,110 90,35 150,110" fill="#2a3040" />
+                <polygon points="80,110 130,45 180,110" fill="#1e2838" />
+                <polygon points="0,110 50,60 100,110" fill="#263040" />
+                <polygon points="80,110 90,38 100,110" fill="#9a9a8a" opacity="0.5" />
+                <rect x="0" y="110" width="200" height="20" fill="#1a2010" />
+                <rect x="85" y="85" width="3" height="25" fill="#8a7a50" opacity="0.5" />
+                <polygon points="80,85 88,70 96,85" fill="#c8a060" opacity="0.4" />
+              </svg>
+            </div>
+            <p class="vc-label">Starfield · 4,200m</p>
+          </div>
+          <div class="visual-card vc3">
+            <div class="vc-badge">ECO CERTIFIED</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section" id="about">
+    <div class="cta-inner reveal">
+      <p class="section-eyebrow">Ready?</p>
+      <h2 class="cta-title">Your Trek Begins<br />With One Message</h2>
+      <p class="cta-subtitle">
+        Tell us your fitness level, available dates, and dream altitude.
+        We'll design a custom route within 48 hours — no commitment required.
+      </p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary btn-large">Plan My Trek</a>
+        <a href="mailto:hello@summitpath.np" class="btn btn-ghost">Email Us</a>
+      </div>
+      <p class="cta-note">&#10003; Free consultation &nbsp;&nbsp; &#10003; No deposit until confirmed &nbsp;&nbsp; &#10003; Full refund policy</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-symbol">&#9651;</span>
+          <span class="logo-text">SummitPath</span>
+        </div>
+        <p class="footer-tagline">
+          Himalayan Eco-Trek Co.<br />
+          Thamel, Kathmandu, Nepal 44600
+        </p>
+        <p class="footer-contact-info">
+          &#128222; +977-1-4780000<br />
+          &#9993; hello@summitpath.np
+        </p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Treks</h4>
+        <ul>
+          <li><a href="#">Poon Hill</a></li>
+          <li><a href="#">Everest Base Camp</a></li>
+          <li><a href="#">Annapurna Circuit</a></li>
+          <li><a href="#">Langtang Valley</a></li>
+          <li><a href="#">Manaslu Circuit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Our Guides</a></li>
+          <li><a href="#">Eco Policy</a></li>
+          <li><a href="#">Safety Record</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Plan</h4>
+        <ul>
+          <li><a href="#">What to Pack</a></li>
+          <li><a href="#">Permit Guide</a></li>
+          <li><a href="#">Altitude FAQ</a></li>
+          <li><a href="#">Insurance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; 2025 SummitPath Eco-Trek Pvt. Ltd. &nbsp;|&nbsp; All rights reserved
+      </p>
+      <p class="footer-legal">
+        <a href="#">Privacy</a> &nbsp;&bull;&nbsp;
+        <a href="#">Terms</a> &nbsp;&bull;&nbsp;
+        <a href="#">Cookies</a>
+      </p>
+    </div>
   </footer>
 
+  <script>
+    // Sticky navbar effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+
+    // Scroll-triggered fade-in using IntersectionObserver (Phase 5 self-learning)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
