@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Essentials Practice</title>
+</head>
+<body>
+
+  <!-- Part 1: Block vs Inline -->
+  <p>This is a paragraph (block — takes full width).</p>
+  <span>This is a span (inline — only as wide as content).</span>
+  <span>Spans sit next to each other.</span>
+
+  <hr />
+
+  <!-- Part 2: Headings -->
+  <h1>This is an h1 (one per page!)</h1>
+  <h2>This is an h2</h2>
+  <h3>This is an h3</h3>
+  <h4>This is an h4</h4>
+  <h5>This is an h5</h5>
+  <h6>This is an h6</h6>
+
+  <!-- Part 2: Text Formatting -->
+  <p>A normal paragraph.</p>
+  <p>
+    You can have <strong>important text</strong>,
+    <em>emphasized text</em>,
+    <mark>highlighted text</mark>,
+    <small>smaller text</small>,
+    <del>deleted text</del>,
+    and <ins>inserted text</ins>.
+  </p>
+  <p>Line break <br /> inside a paragraph.</p>
+  <hr />
+  <p>Above this paragraph is a horizontal rule.</p>
+
+  <!-- Part 2: Lists -->
+  <h2>Unordered list (bullets)</h2>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <h2>Ordered list (numbers)</h2>
+  <ol>
+    <li>Open VS Code</li>
+    <li>Create a file</li>
+    <li>Write HTML</li>
+  </ol>
+
+  <h2>Description list</h2>
+  <dl>
+    <dt>HTML</dt>
+    <dd>The structure of a webpage</dd>
+    <dt>CSS</dt>
+    <dd>The styling of a webpage</dd>
+  </dl>
+
+  <!-- Part 2: Links -->
+  <h2>Links</h2>
+  <a href="https://developer.mozilla.org">External link to MDN</a><br />
+  <a href="about.html">Link to another page in this folder</a><br />
+  <a href="#contact">Link to a section in this page (anchor)</a><br />
+  <a href="mailto:hello@example.com">Send email</a><br />
+  <a href="tel:+9779800000000">Call phone</a><br />
+  <a href="https://example.com" target="_blank" rel="noopener">Open in new tab</a>
+
+  <!-- Part 2: Image -->
+  <h2>Image</h2>
+  <img
+    src="https://picsum.photos/300/200"
+    alt="A random scenic photo"
+    width="300"
+    height="200"
+  />
+
+  <!-- Part 3: Form -->
+  <h2>Contact Form</h2>
+  <form action="/submit" method="POST">
+    <label for="name">Full name</label><br />
+    <input type="text" id="name" name="name" placeholder="John Doe" required /><br /><br />
+
+    <label for="email">Email</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+
+    <label for="age">Age</label><br />
+    <input type="number" id="age" name="age" min="13" max="120" /><br /><br />
+
+    <label for="password">Password</label><br />
+    <input type="password" id="password" name="password" minlength="8" required /><br /><br />
+
+    <label for="bio">About you</label><br />
+    <textarea id="bio" name="bio" rows="4" cols="40"></textarea><br /><br />
+
+    <label for="country">Country</label><br />
+    <select id="country" name="country">
+      <option value="">-- Select --</option>
+      <option value="np">Nepal</option>
+      <option value="in">India</option>
+      <option value="us">United States</option>
+    </select><br /><br />
+
+    <fieldset>
+      <legend>Gender</legend>
+      <input type="radio" id="m" name="gender" value="male" />
+      <label for="m">Male</label>
+      <input type="radio" id="f" name="gender" value="female" />
+      <label for="f">Female</label>
+      <input type="radio" id="o" name="gender" value="other" />
+      <label for="o">Other</label>
+    </fieldset><br />
+
+    <input type="checkbox" id="terms" name="terms" required />
+    <label for="terms">I agree to the terms</label><br /><br />
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <!-- Part 4: Table -->
+  <h2>Course Schedule</h2>
+  <table border="1">
+    <caption>Course Schedule</caption>
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Topic</th>
+        <th>Outcome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>HTML</td>
+        <td>Static website</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>CSS</td>
+        <td>Styled &amp; responsive</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total weeks</td>
+        <td>12</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- Part 4: Media -->
+  <h2>Video</h2>
+  <video controls width="400">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg" />
+    Your browser does not support video.
+  </video>
+
+  <h2>Audio</h2>
+  <audio controls>
+    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+    Your browser does not support audio.
+  </audio>
+
+  <h2>Embedded Video (iframe)</h2>
+  <iframe
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    width="560"
+    height="315"
+    title="YouTube video"
+    allowfullscreen
+  ></iframe>
+
+  <!-- Part 5: Semantic Structure -->
+  <h2>Semantic HTML Example</h2>
+
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <header>
+        <h2>Why semantic HTML matters</h2>
+        <p>Published <time datetime="2026-05-22">May 22, 2026</time></p>
+      </header>
+      <section>
+        <h3>Accessibility</h3>
+        <p>Screen readers can navigate by landmark.</p>
+      </section>
+      <section>
+        <h3>SEO</h3>
+        <p>Google understands your content better.</p>
+      </section>
+      <footer>
+        <p>Tags: <a href="#html">HTML</a>, <a href="#a11y">Accessibility</a></p>
+      </footer>
+    </article>
+
+    <aside>
+      <h3>Related posts</h3>
+      <ul>
+        <li><a href="#">CSS basics</a></li>
+        <li><a href="#">JavaScript intro</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2026 My Blog. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
