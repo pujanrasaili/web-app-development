@@ -32,6 +32,7 @@ This repository tracks my progress throughout a 3-month intensive bootcamp focus
 
 - `index.html` → Sarab Fast Food & Restaurant — navbar + hero section
 
+🌐 **Live Preview:** https://pujanrasaili.github.io/web-app-development/
 ---
 
 ## 🛣️ Course Roadmap
