@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sarab – Fast Food & Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,900&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:      #e8270e;
+      --red-dark: #c41f07;
+      --bg:       #fdf4ee;
+      --white:    #ffffff;
+      --text:     #1a1a1a;
+      --muted:    #888;
+      --shadow:   0 8px 30px rgba(0,0,0,.11);
+      --shadow-sm:0 4px 16px rgba(0,0,0,.08);
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /*  NAVBAR  */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 56px;
+      height: 70px;
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--red);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    /* Fork + spoon / cutlery SVG — matching the original closely */
+    .logo-icon svg { width: 24px; height: 24px; }
+
+    .logo-text { line-height: 1.15; }
+    .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      display: inline;
+    }
+    .logo-name .black { color: #1a1a1a; }
+    .logo-name .orange { color: var(--red); }
+
+    .logo-tagline {
+      display: block;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-top: 1px;
+    }
+
+    /* Nav links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: #444;
+      padding: 6px 13px;
+      transition: color .2s;
+      position: relative;
+    }
+    .nav-links a:hover { color: var(--red); }
+    .nav-links li.active a { color: var(--red); }
+    .nav-links li.active a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 22px;
+      height: 3px;
+      background: var(--red);
+      border-radius: 2px;
+    }
+
+    /* Right side */
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+
+    .nav-search {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #555;
+      display: flex;
+      align-items: center;
+      padding: 5px;
+    }
+    .nav-search svg {
+      width: 17px; height: 17px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2; stroke-linecap: round;
+    }
+
+    .btn-order {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s;
+      letter-spacing: .2px;
+    }
+    .btn-order:hover { background: var(--red-dark); }
+    .btn-order svg { width: 14px; height: 14px; fill: none; stroke: white; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: calc(100vh - 70px);
+      padding: 50px 56px 40px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Watermark letters "FOOD" */
+    .watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-38%, -52%);
+      font-family: 'Playfair Display', serif;
+      font-size: 400px;
+      font-weight: 900;
+      color: rgba(0,0,0,.055);
+      line-height: 1;
+      pointer-events: none;
+      z-index: 0;
+      letter-spacing: -10px;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    /* Left column */
+    .hero-left {
+      position: relative;
+      z-index: 2;
+      max-width: 460px;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--white);
+      border-radius: 50px;
+      padding: 7px 16px 7px 9px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text);
+      box-shadow: 0 3px 14px rgba(0,0,0,.09);
+      margin-bottom: 24px;
+    }
+    .badge-star {
+      width: 25px; height: 25px;
+      background: var(--red);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .badge-star svg { width: 13px; height: 13px; fill: var(--white); }
+
+    /* Headline */
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 66px;
+      font-weight: 900;
+      line-height: 1.07;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+    .hero-title .red { color: var(--red); font-style: italic; }
+
+    /* Sub text — fixed line breaks matching the design */
+    .hero-sub {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--muted);
+      margin-bottom: 34px;
+      /* narrow width so lines break exactly as in design */
+      max-width: 340px;
+    }
+
+    /* CTA buttons */
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-bottom: 50px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--red);
+      color: var(--white);
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-size: 14.5px;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background .2s;
+      letter-spacing: .2px;
+    }
+    .btn-primary:hover { background: var(--red-dark); }
+    .btn-primary svg {
+      width: 16px; height: 16px;
+      fill: white;
+    }
+
+    /* Play button — orange circle */
+    .btn-play {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .play-circle {
+      width: 44px; height: 44px;
+      background: var(--red);        /* orange/red — matching original */
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 14px rgb(255, 255, 255);
+    }
+    .play-circle svg {
+      width: 13px; height: 13px;
+      fill: var(--white);
+      margin-left: 2px;
+    }
+
+    /* Stats */
+    .stats { display: flex; gap: 32px; }
+    .stat-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1;
+    }
+    .stat-val sup { color: var(--red); font-size: 18px; }
+    .stat-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-top: 4px;
+    }
+
+    /*  RIGHT SIDE  */
+    .hero-right {
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+      width: 430px;
+      height: 430px;
+    }
+
+    /* Circular burger image */
+    .food-circle {
+      width: 390px;
+      height: 390px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 18px 55px rgba(0,0,0,.20);
+      z-index: 2;
+    }
+    .food-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Floating cards */
+    .float-card {
+      position: absolute;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 9px 13px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      z-index: 10;
+      min-width: 130px;
+    }
+    .card-icon {
+      width: 30px; height: 30px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .card-label {
+      font-size: 12px; font-weight: 800; color: var(--text); line-height: 1;
+    }
+    .card-sub {
+      font-size: 10px; color: var(--muted); margin-top: 2px;
+    }
+
+    /* Hot Deal — upper left of circle */
+    .card-hot {
+      top: 32px;
+      left: -20px;
+    }
+    .card-hot .card-icon { background: #fff0ed; }
+    .card-hot svg { width: 15px; height: 15px; fill: var(--red); }
+
+    /* 20 min — right side, mid */
+    .card-delivery {
+      top: 50%;
+      right: -50px;
+      transform: translateY(-80%);
+    }
+    .card-delivery .card-icon { background: #ebf7f2; }
+    .card-delivery svg { width: 15px; height: 15px; fill: none; stroke: #22a06b; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* 4.9/5 — bottom right */
+    .card-rating {
+      bottom: 40px;
+      right: -40px;
+    }
+    .card-rating .card-icon { background: #fff8e6; }
+    .card-rating svg { width: 15px; height: 15px; fill: #f59e0b; }
+  </style>
+</head>
+<body>
+
+<!--  NAVBAR -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-icon">
+      <!-- Fork & knife icon matching original: two utensils side by side -->
+      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Fork: handle + 3 tines -->
+        <line x1="8" y1="4" x2="8" y2="22" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="6" y1="4" x2="6" y2="10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="8" y1="4" x2="8" y2="10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="10" y1="4" x2="10" y2="10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M6 10 Q8 13 10 10" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <!-- Knife: blade + handle -->
+        <path d="M17 4 C17 4 19.5 7 19.5 11 L17 12 L17 22" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <div class="logo-name">
+        <span class="black">Sar</span><span class="orange">ab</span>
+      </div>
+      <span class="logo-tagline">Fast Food &amp; Restaurant</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Menu</a></li>
+    <li><a href="#">Chefs</a></li>
+    <li><a href="#">Reservation</a></li>
+    <li><a href="#">Reviews</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <button class="nav-search" aria-label="Search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+    </button>
+    <a href="#" class="btn-order">
+      <!-- Shopping bag icon -->
+      <svg viewBox="0 0 24 24">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      Order Now
+    </a>
+  </div>
+</nav>
+
+<!--  HERO  -->
+<section class="hero">
+
+  <!-- Watermark FOOD — positioned so right O is half-hidden by burger -->
+  <div class="watermark">FOOD</div>
+
+  <!-- LEFT -->
+  <div class="hero-left">
+
+    <div class="badge">
+      <div class="badge-star">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      #1 Rated Fast Food Restaurant in New York
+    </div>
+
+    <h1 class="hero-title">
+      Delicious<br>
+      <span class="red">Fast Food</span><br>
+      for Every<br>
+      Moment
+    </h1>
+
+    <p class="hero-sub">
+      Experience bold flavors crafted from premium ingredients.
+      From crispy burgers to gourmet pizzas – every bite is an
+      adventure worth savoring.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#" class="btn-primary">
+        <!-- Fork/menu icon -->
+        <svg viewBox="0 0 24 24">
+          <line x1="8" y1="2" x2="8" y2="22"/>
+          <path d="M6 2v7a2 2 0 002 2 2 2 0 002-2V2"/>
+          <line x1="17" y1="2" x2="17" y2="22"/>
+          <path d="M17 2c0 0 3 3 3 7s-3 3-3 3"/>
+        </svg>
+        Explore Menu
+      </a>
+      <a href="#" class="btn-play">
+        <div class="play-circle">
+          <svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg>
+        </div>
+        Watch Our Story
+      </a>
+    </div>
+
+    <div class="stats">
+      <div>
+        <div class="stat-val">850<sup>+</sup></div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div>
+        <div class="stat-val">120<sup>+</sup></div>
+        <div class="stat-label">Menu Items</div>
+      </div>
+      <div>
+        <div class="stat-val">15<sup>+</sup></div>
+        <div class="stat-label">Expert Chefs</div>
+      </div>
+      <div>
+        <div class="stat-val">12<sup style="color:var(--red);font-size:16px;font-family:'Nunito',sans-serif;font-weight:800;">yr</sup></div>
+        <div class="stat-label">Experience</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: burger + floating cards -->
+  <div class="hero-right">
+
+    <div class="food-circle">
+      <img
+        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80"
+        alt="Delicious double cheeseburger"
+      />
+    </div>
+
+    <!-- Hot Deal card — top left, overlapping circle edge -->
+    <div class="float-card card-hot">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2c0 6-8 8-4 14a7 7 0 0014 0c0-5-4-6-4-10-2 2-2 4-2 6-2-2-4-6-4-10z"/></svg>
+      </div>
+      <div>
+        <div class="card-label">Hot Deal</div>
+        <div class="card-sub">30% off today</div>
+      </div>
+    </div>
+
+    <!-- 20 min delivery — right of circle -->
+    <div class="float-card card-delivery">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <div>
+        <div class="card-label">20 min</div>
+        <div class="card-sub">Fast delivery</div>
+      </div>
+    </div>
+
+    <!-- 4.9/5 rating — bottom right -->
+    <div class="float-card card-rating">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <div class="card-label">4.9/5</div>
+        <div class="card-sub">2k+ reviews</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
