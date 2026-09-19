@@ -1,14 +1,14 @@
-# 🚀 Web App Development using Node.js — 3-Month Bootcamp
+# Web App Development using Node.js — 3-Month Bootcamp
 
 This repository tracks my progress throughout a 3-month intensive bootcamp focused on full-stack web development using Node.js and the MERN stack.
 
-📅 **Course:** Web App Development using Node.js (MERN + AI)  
-🏫 **Platform:** Google Classroom  
-📆 **Started:** May 2026  
+**Course:** Web App Development using Node.js (MERN + AI)  
+**Platform:** Google Classroom  
+**Started:** May 2026  
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ### Week 1 — HTML Essentials
 > Workshop: Build basic HTML pages from scratch
@@ -32,10 +32,10 @@ This repository tracks my progress throughout a 3-month intensive bootcamp focus
 
 - `index.html` → Sarab Fast Food & Restaurant — navbar + hero section
 
-🌐 **Live Preview:** https://pujanrasaili.github.io/web-app-development/
+**Live Preview:** https://pujanrasaili.github.io/web-app-development/
 ---
 
-## 🛣️ Course Roadmap
+## Course Roadmap
 
 - [x] Week 1 → HTML Essentials
 - [x] Week 2 → Design Without Instructions
@@ -54,5 +54,9 @@ This repository tracks my progress throughout a 3-month intensive bootcamp focus
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 `HTML` · `CSS` · `JavaScript` · `Node.js` · `Express` · `MongoDB` · `React` · `AI APIs`
+
+## Author
+
+**Pujan Rasaili**
